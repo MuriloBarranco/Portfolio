@@ -58,6 +58,14 @@ const Home = () => {
                       <div className="ring three"></div>
                     </ActionButton>
                   </Link>
+                  <Link to="/about">
+                    <ActionButton id="button_whatsapp" className="ac_btn btn">
+                      Sobre mim
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </ActionButton>
+                  </Link>
 
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -73,6 +81,7 @@ const Home = () => {
                       <div className="ring three"></div>
                     </ActionButton>
                   </a>
+
                 </div>
               </div>
             </Intro>
