@@ -11,13 +11,13 @@ const introdata = {
         second: "Crio interfaces intuitivas e eficientes",
         third: "Foco na experiência do usuário",
     },
-    description: "Olá! Sou Murilo Barranco, um desenvolvedor full stack dedicado a transformar ideias em realidade digital. Com minha paixão por tecnologia, busco sempre entregar soluções que combinam funcionalidade e design.",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d"
+    description: "Olá! Sou Murilo Barranco, um desenvolvedor full stack dedicado a transformar ideias em realidade digital. Com minha paixão por tecnologia, Busco sempre entregar soluções que combinam funcionalidade e design.",
+    your_img_url: ""
 };
 
 const dataabout = {
     title: "Sobre Mim",
-    aboutme: "Sou apaixonado por desenvolvimento web e mobile, buscando sempre aprender e aplicar as mais recentes tecnologias. Com experiência em React, React Native, Node.js e mais, estou pronto para enfrentar novos desafios e contribuir para projetos inovadores.",
+    aboutme: "Sou apaixonado por desenvolvimento web e mobile, buscando sempre aprender e aplicar as mais recentes tecnologias. Com experiência em React, React Native, Node.js e mais, estou pronto para enfrentar novos desafios e contribuir para projetos inovadores. Além disso, desenvolvo automações e sistemas que visam facilitar a vida das pessoas, melhorando a eficiência e otimizando processos."
 };
 
 const worktimeline = [
@@ -54,16 +54,20 @@ const skills = [
 
 const services = [
     {
-        title: "Desenvolvimento de Interfaces (UI/UX)",
-        description: "Crio interfaces que combinam estética e usabilidade para proporcionar uma experiência de usuário excepcional.",
-    },
-    {
         title: "Desenvolvimento de Aplicações Mobile",
         description: "Desenvolvo aplicativos móveis modernos e eficientes, adaptados para diversas plataformas e requisitos.",
     },
     {
-        title: "Desenvolvimento Web com Next.js",
-        description: "Utilizo Next.js para criar aplicações web rápidas e escaláveis, otimizadas para SEO e performance.",
+        title: "Desenvolvimento de Aplicações Web",
+        description: "Desenvolvo aplicações web, sites, dashboards e painéis de controle personalizados.",
+    },
+    {
+        title: "Desenvolvimento de Aplicativos para iOS e Android",
+        description: "Desenvolvo aplicativos para iOS e Android, disponibilizando na App Store e Google Play Store.",
+    },
+    {
+        title: "Desenvolvimento de Automações",
+        description: "Desenvolvo soluções automatizadas para facilitar processos e otimizar operações, melhorando a eficiência e reduzindo custos.",
     },
 ];
 const dataportfolio = [
