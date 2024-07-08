@@ -87,9 +87,9 @@ const contactConfig = {
     YOUR_EMAIL: "murilobarranco.dev@hotmail.com",
     YOUR_FONE: "(18)99736-2352",
     description: "Entre em contato comigo para discutir projetos, colaborações ou apenas para dizer olá!",
-    YOUR_SERVICE_ID: "seu_service_id",
-    YOUR_TEMPLATE_ID: "seu_template_id",
-    YOUR_USER_ID: "seu_user_id",
+    YOUR_SERVICE_ID: "service_5l249z9",
+    YOUR_TEMPLATE_ID: "template_u0dn1eg",
+    YOUR_USER_ID: "1inPg2pCUdyDMY2Kn",
 };
 
 
