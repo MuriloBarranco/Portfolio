@@ -1,12 +1,72 @@
 import React, { useState } from "react";
-import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
+import { contactConfig, meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
 import * as emailjs from "emailjs-com";
+import styled, { keyframes } from "styled-components";
+
+const Form = styled.form`
+  .form-control {
+    padding: 1.375rem 0.75rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 0 !important;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 2em;
+    height: calc(2.5em + 0.75rem + 2px);
+  }
+
+  textarea.form-control {
+    height: 150px; 
+  }
+`;
+
+const LoadingBar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 999999999;
+  background: var(--text-color);
+  transform: translateX(100%);
+  animation: ${keyframes`
+    0% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(0%);
+    }
+    60% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  `} 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+`;
+
+const SubmitButton = styled.button`
+  width: 100%;
+  height: 50px;
+ color: var(--primary-color);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  
+  &:hover {
+    opacity: 0.8;
+  }
+ 
+`;
 
 export const ContactUs = () => {
+
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -16,6 +76,8 @@ export const ContactUs = () => {
     alertmessage: "",
     variant: "",
   });
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -109,7 +171,7 @@ export const ContactUs = () => {
             <p>{contactConfig.description}</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
-            <form onSubmit={handleSubmit} className="contact__form w-100">
+            <Form onSubmit={handleSubmit} className="contact__form w-100">
               <Row>
                 <Col lg="6" className="form-group">
                   <input
@@ -149,16 +211,20 @@ export const ContactUs = () => {
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Enviando..." : "Enviar"}
-                  </button>
+                  <SubmitButton
+                    className="btn ac_btn"
+                    type="submit"
+                    sending={formData.loading}
+                  >
+                    {formData.loading ? "Carregando..." : "ENVIAR"}
+                  </SubmitButton>
                 </Col>
               </Row>
-            </form>
+            </Form>
           </Col>
         </Row>
       </Container>
-      <div className={formData.loading ? "loading-bar" : "d-none"}></div>
+      <LoadingBar className={formData.loading ? "loading-bar" : "d-none"}></LoadingBar>
     </HelmetProvider>
   );
 };
