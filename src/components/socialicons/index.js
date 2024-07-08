@@ -1,5 +1,9 @@
-import React from "react";
-import "./style.css";
+import React from "react"
+
+import { Icon, IconItem, IconList, StickFollowIcon, FollowText } from "./styles"
+
+import { socialprofils } from "../../content_option"
+
 import {
   FaGithub,
   FaTwitter,
@@ -7,57 +11,56 @@ import {
   FaLinkedin,
   FaYoutube,
   FaTwitch,
-} from "react-icons/fa";
-import { socialprofils } from "../../content_option";
+} from "react-icons/fa"
 
-export const Socialicons = (params) => {
+export const Socialicons = () => {
   return (
-    <div className="stick_follow_icon">
-      <ul>
+    <StickFollowIcon>
+      <IconList>
         {socialprofils.twitter && (
-          <li>
+          <IconItem>
             <a href={socialprofils.twitter}>
-              <FaTwitter />
+              <Icon as={FaTwitter} />
             </a>
-          </li>
+          </IconItem>
         )}
         {socialprofils.github && (
-          <li>
+          <IconItem>
             <a href={socialprofils.github}>
-              <FaGithub />
+              <Icon as={FaGithub} />
             </a>
-          </li>
+          </IconItem>
         )}
         {socialprofils.facebook && (
-          <li>
+          <IconItem>
             <a href={socialprofils.facebook}>
-              <FaFacebookF />
+              <Icon as={FaFacebookF} />
             </a>
-          </li>
+          </IconItem>
         )}
         {socialprofils.linkedin && (
-          <li>
+          <IconItem>
             <a href={socialprofils.linkedin}>
-              <FaLinkedin />
+              <Icon as={FaLinkedin} />
             </a>
-          </li>
+          </IconItem>
         )}
         {socialprofils.youtube && (
-          <li>
+          <IconItem>
             <a href={socialprofils.youtube}>
-              <FaYoutube />
+              <Icon as={FaYoutube} />
             </a>
-          </li>
+          </IconItem>
         )}
         {socialprofils.twitch && (
-          <li>
+          <IconItem>
             <a href={socialprofils.twitch}>
-              <FaTwitch />
+              <Icon as={FaTwitch} />
             </a>
-          </li>
+          </IconItem>
         )}
-      </ul>
-      <p>Follow Me</p>
-    </div>
-  );
-};
+      </IconList>
+      <FollowText>Me siga</FollowText>
+    </StickFollowIcon>
+  )
+}
